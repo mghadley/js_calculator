@@ -1,0 +1,42 @@
+@import 'materialize';
+
+.calculator {
+	height: 80%;
+	border: solid 2px;
+	border-radius: 10px;
+	padding: 30px !important;
+}
+
+.display {
+	height: 50px;
+	border: solid 2px;
+	margin-bottom: 15px;
+}
+
+.display h3 {
+	margin: 0;
+	text-align: right;
+}
+
+.number, .operator {
+	width: 100%;
+}
+
+.extras {
+	margin-top: 30px;
+}
+
+.function-btn {
+	width: 99%;
+	text-align: center;
+	padding: 0;
+}
+
+.btn {
+	padding: 0;
+}
+
+#clear-history {
+	display: none;
+	padding: 0 5px;
+}

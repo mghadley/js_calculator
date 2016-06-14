@@ -1,0 +1,132 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="stylesheets/style.scss"  media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type='text/javascript' src='javascripts/app.js'></script>
+	</head>
+	<body>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>    
+	<nav>
+    <div class="nav-wrapper blue-grey darken-3">
+      <div class='brand-logo center'>JS Calculator</div>
+    </div>
+  </nav>
+	<div class='row'>
+		<div class='calculator col m6 offset-m1 grey darken-3'>
+			<div class='display grey lighten-2'>
+				<h3 id='display'></h3>
+			</div>
+			<div class='row'>
+				<div class='col s2 offset-s1'>
+					<div id='ce' class='btn function-btn' onClick='cePress();'>ce</div>
+				</div>
+				<div class='col s2'>
+					<div id='ca' class='btn function-btn' onClick='caPress();'>ca</div>
+				</div>
+				<div class='col s2'>
+					<div id='ms' class='btn function-btn' onClick='msPress();'>ms</div>
+				</div>
+				<div class='col s2'>
+					<div id='mr' class='btn function-btn' onClick='mrPress();'>mr</div>
+				</div>
+				<div class='col s2'>
+					<div id='mc' class='btn function-btn' onClick='mcPress();'>mc</div>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col s3'>
+					<div id='seven' class='number btn' onClick='numberPress(this.innerHTML);'>7</div>
+				</div>
+				<div class='col s3'>
+					<div id='eight' class='number btn' onClick='numberPress(this.innerHTML);'>8</div>
+				</div>
+				<div class='col s3'>
+					<div id='nine' class='number btn' onClick='numberPress(this.innerHTML);'>9</div>
+				</div>
+				<div class='col s3'>
+					<div id='/' class='operator btn' onClick='operatorPress(this.innerHTML);'>/</div>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col s3'>
+					<div id='four' class='number btn' onClick='numberPress(this.innerHTML);'>4</div>
+				</div>
+				<div class='col s3'>
+					<div id='five' class='number btn' onClick='numberPress(this.innerHTML);'>5</div>
+				</div>
+				<div class='col s3'>
+					<div id='six' class='number btn' onClick='numberPress(this.innerHTML);'>6</div>
+				</div>
+				<div class='col s3'>
+					<div id='x' class='operator btn' onClick='operatorPress(this.innerHTML);'>x</div>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col s3'>
+					<div id='one' class='number btn' onClick='numberPress(this.innerHTML);'>1</div>
+				</div>
+				<div class='col s3'>
+					<div id='two' class='number btn' onClick='numberPress(this.innerHTML);'>2</div>
+				</div>
+				<div class='col s3'>
+					<div id='three' class='number btn' onClick='numberPress(this.innerHTML);'>3</div>
+				</div>
+				<div class='col s3'>
+					<div id='-' class='operator btn' onClick='operatorPress(this.innerHTML);'>-</div>
+				</div>
+			</div>
+			<div class='row'>
+			  <div class='col s3'>
+					<div id='zero' class='number btn' onClick='numberPress(this.innerHTML);'>0</div>
+				</div>
+			  <div class='col s3'>
+					<div id='decimal' class='number btn' onClick='decimalPress();'>.</div>
+				</div>
+			  <div class='col s3'>
+					<div id='equals' class='operator btn orange darken-4' onClick='equalsPress();'>=</div>
+				</div>
+			  <div class='col s3'>
+					<div id='+' class='operator btn' onClick='operatorPress(this.innerHTML);'>+</div>
+				</div>
+			</div>
+			<hr>
+			<div class='row extras'>
+			  <div class='col s3'>
+					<div id='sqr' class='operator btn' onClick='sqrPress()'>X<sup>2</sup></div>
+				</div>
+			  <div class='col s3'>
+					<div id='pow' class='number btn' onClick="operatorPress('pow');">X<sup>y</sup></div>
+				</div>
+			  <div class='col s3'>
+					<div id='equals' class='operator btn' onClick='sqrtPress();'>SQRT</div>
+				</div>
+			  <div class='col s3'>
+					<div id='xroot' class='operator btn' onClick="operatorPress('xroot');">XROOT</div>
+				</div>
+			</div>
+			<div class='row'>
+			  <div class='col s3'>
+					<div id='sin' class='operator btn' onClick='trigPress(this.innerHTML)'>sin</div>
+				</div>
+			  <div class='col s3'>
+					<div id='cos' class='number btn' onClick="trigPress(this.innerHTML);">cos</div>
+				</div>
+			  <div class='col s3'>
+					<div id='tan' class='operator btn' onClick='trigPress(this.innerHTML);'>tan</div>
+				</div>
+			  <div class='col s3'>
+					<div id='log' class='operator btn' onClick="trigPress(this.innerHTML);">log</div>
+				</div>
+			</div>
+		</div>
+		<div class='history center'>
+			<h3 class='center'>History</h3>
+			<p id='history-list' class='center'></p>
+			<button id='clear-history' class='btn btn-small center-btn' onClick="clearHistory()">Clear History</button>
+		</div>
+	</div>
+	</body>
+</html>
